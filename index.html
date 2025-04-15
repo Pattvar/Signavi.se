@@ -113,3 +113,33 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logga in</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="login-container">
+    <!-- Lägg till logotypen här -->
+    <div class="logo-container">
+      <img src="path-to-your-logo/logo.png" alt="SignAvi Logga" class="logo">
+    </div>
+    <h2>Välkommen till SignAvi</h2>
+    <form id="login-form">
+      <label for="username">Användarnamn</label>
+      <input type="text" id="username" name="username" required><br><br>
+
+      <label for="password">Lösenord</label>
+      <input type="password" id="password" name="password" required><br><br>
+
+      <button type="submit">Logga in</button>
+    </form>
+    <p id="error-message" style="color: red; display: none;">Felaktigt användarnamn eller lösenord.</p>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
