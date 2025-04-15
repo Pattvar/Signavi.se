@@ -4,9 +4,55 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Signavi</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f7fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      text-align: center;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 400px;
+    }
+    h1 {
+      color: #4c9aff;
+    }
+    .button {
+      background-color: #4c9aff;
+      color: white;
+      padding: 10px 20px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+    .button:hover {
+      background-color: #2f76c7;
+    }
+  </style>
 </head>
 <body>
-  <h1>Välkommen till Signavi</h1>
-  <p>Detta är din nya digitala postväxellösning 🚀</p>
+  <div class="container">
+    <img src="https://via.placeholder.com/150x50?text=Signavi" alt="Signavi Logo" />
+    <h1>Välkommen till Signavi</h1>
+    <p>Digitalisera och förenkla hanteringen av postväxlar.</p>
+    
+    <!-- Placeholder for BankID sign-in button -->
+    <button class="button" onclick="alert('BankID inloggning kommer snart!')">Logga in med BankID</button>
+
+    <!-- Invite button for testing -->
+    <button class="button" onclick="alert('Testanvändare kommer att bjudas in snart!')">Bjud in testanvändare</button>
+  </div>
 </body>
 </html>
