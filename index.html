@@ -5,54 +5,111 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Signavi</title>
   <style>
+    /* Bakgrundsbild med rörelse */
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f7fa;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      height: 100vh;
+      background: url('https://via.placeholder.com/1920x1080') no-repeat center center fixed;
+      background-size: cover;
+      animation: backgroundMove 10s infinite linear;
+    }
+
+    @keyframes backgroundMove {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 100% 0;
+      }
+    }
+
+    /* Centrerar allting på skärmen */
+    .container {
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      margin: 0;
-    }
-    .container {
       text-align: center;
-      background: white;
-      padding: 20px;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* Formatering av innercontainer */
+    .content {
+      background-color: rgba(255, 255, 255, 0.8); /* halvgenomskinlig vit bakgrund */
+      padding: 40px;
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      width: 90%;
+      width: 80%;
       max-width: 400px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
+
     h1 {
+      font-size: 2.5rem;
       color: #4c9aff;
+      margin-bottom: 20px;
     }
+
+    p {
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    /* Button styling */
     .button {
       background-color: #4c9aff;
       color: white;
-      padding: 10px 20px;
-      margin-top: 20px;
+      padding: 15px 30px;
       border: none;
       border-radius: 5px;
       cursor: pointer;
       font-size: 16px;
       transition: background-color 0.3s;
     }
+
     .button:hover {
       background-color: #2f76c7;
+    }
+
+    /* Liten animation på knappen */
+    .button:active {
+      transform: scale(0.98);
+    }
+
+    /* Responsiv design för mobil */
+    @media (max-width: 600px) {
+      .content {
+        width: 90%;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="https://via.placeholder.com/150x50?text=Signavi" alt="Signavi Logo" />
-    <h1>Välkommen till Signavi</h1>
-    <p>Digitalisera och förenkla hanteringen av postväxlar.</p>
-    
-    <!-- Placeholder for BankID sign-in button -->
-    <button class="button" onclick="alert('BankID inloggning kommer snart!')">Logga in med BankID</button>
 
-    <!-- Invite button for testing -->
-    <button class="button" onclick="alert('Testanvändare kommer att bjudas in snart!')">Bjud in testanvändare</button>
+  <div class="container">
+    <div class="content">
+      <img src="https://via.placeholder.com/150x50?text=Signavi" alt="Signavi Logo" />
+      <h1>Välkommen till Signavi!</h1>
+      <p>Digitalisera och förenkla hanteringen av postväxlar med säker inloggning och smarta funktioner.</p>
+      
+      <!-- Placeholder for BankID sign-in button -->
+      <button class="button" onclick="alert('BankID inloggning kommer snart!')">Logga in med BankID</button>
+
+      <!-- Invite button for testing -->
+      <button class="button" onclick="alert('Testanvändare kommer att bjudas in snart!')">Bjud in testanvändare</button>
+    </div>
   </div>
+
 </body>
 </html>
